@@ -1,0 +1,29 @@
+{
+  "name": "video-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api.js",
+    "sdev": "nodemon api.js",
+    "cdev": "parcel client/index.html --public-url static/ --out-dir static/",
+    "build": "parcel build client/index.html --public-url static/ --out-dir static/",
+    "lint": "standard",
+    "fix": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.7",
+    "nodemon": "^1.18.6",
+    "parcel-bundler": "^1.10.3",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "is-buffer": "^2.0.3"
+  }
+}
