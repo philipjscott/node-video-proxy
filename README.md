@@ -16,7 +16,7 @@ An endpoint is created in `express`:
 GET /video/:url
 ```
 
-Where `url` is a URL encoded video URL. A request is made from the Node.js server, and the stream response is piped though the HTTP response. The **most common pitfall** to implementing a proxy server is forgetting to forward the stream's response headers. If you forget to do that, you
+Where `url` is a URL encoded video URL. A request is made from the Node.js server, and the stream response is piped through the HTTP response. The **most common pitfall** to implementing a proxy server is forgetting to forward the stream's response headers. If you forget that, you won't be able to seek in the video player.
 
 ### Running locally
 
@@ -25,3 +25,7 @@ npm install
 npm run build
 npm run start
 ```
+
+### Resources 
+
+* https://stackoverflow.com/questions/24976123/streaming-a-video-file-to-an-html5-video-player-with-node-js-so-that-the-video-c
