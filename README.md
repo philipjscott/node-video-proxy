@@ -10,10 +10,18 @@ To get around this, we can create a server that makes a direct request on our be
 
 ### How it works
 
-An endpoint is created in `express:
+An endpoint is created in `express`:
 
 ```
 GET /video/:url
 ```
 
 Where `url` is a URL encoded video URL. A request is made from the Node.js server, and the stream response is piped though the HTTP response. The **most common pitfall** to implementing a proxy server is forgetting to forward the stream's response headers. If you forget to do that, you
+
+### Running locally
+
+```sh
+npm install
+npm run build
+npm run start
+```
