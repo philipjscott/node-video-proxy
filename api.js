@@ -16,12 +16,6 @@ app.get('/', (req, res) => {
 app.get('/video/:url', (req, res) => {
   const url = decodeURIComponent(req.params.url)
 
-  axios.interceptors.request.use(request => {
-    console.log(request)
-
-    return request
-  })
-
   axios.get(url, {
     responseType: 'stream'
   })
